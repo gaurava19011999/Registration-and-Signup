@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script type="text/javascript" src="/static/profile.js"></script>
+	<link rel="stylesheet" type="text/css" href="/static/profile.css">
+
+	<title>Edit Profile</title>
+</head>
+<body>
+
+	<h1>Edit Profile</h1>
+	<form>
+
+		<div class="form-row">
+
+			<div class="file-upload">
+			  <div class="image-upload-wrap">
+			    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+			    <div class="drag-text">
+			      <h3>Select a Profile Picture</h3>
+			    </div>
+			  </div>
+			  <div class="file-upload-content">
+			    <img class="file-upload-image" src="#" alt="your image" />
+			    <div class="image-title-wrap">
+			      <button type="button" onclick="removeUpload()" class="remove-image">Change Photo</button>
+			    </div>
+			  </div>
+			  <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger( 'click' )">Upload</button>
+			</div><br><br><br>
+
+			<div class="detailsform">
+			  <h3>Personal Details</h3><br>
+			  <label for="name">Full Name:</label><br><br>
+			  <input type="text" id="fullname" name="name" maxlength="20" required="text" ><br><br>
+			  <label for="bio">Bio (Max Words Limit 500)</label><br><br>
+			  <input type="text" id="bio" name="Bio" maxlength="1000" required><br><br>
+			  <label for="age">Enter Your Age</label>
+			  <input type="number" id="age" min="18" size="2" maxlength="2" name="age" required="number"><br><br><br>
+			    <select class="dropdown" name = "dropdown" id="gender" required="select">
+			    <option value selected disabled> -- selected Your Gender -- </option>
+                <option value = "male">Male</option>
+                <option value = "female">Female</option>
+                <option value = "other">Others</option>
+         	    </select><br><br><br>
+         	  <label for="hobbies">Hobies</label><br><br>
+         	  <input type="text" id="hobbies" maxlength="500" name="Hobbies"><br><br><br>
+         	  <label for="Height">Height (in cm) </label>
+         	  <input type="number" min="50" max="250" name="height" size="3" maxlength="3" required="number" ><br><br><br><br>
+
+		    <h3>Personal Prefrences</h3><br>
+
+		    <label for="preferedage">Select Prefered Age</label><br><br>
+		 	<select class="dropdown" name = "dropdown" id="preferedage" required="select">
+			    <option value selected disabled> -- selected Your Prefered Age -- </option>
+                <option value = "young">18 - 25</option>
+                <option value = "older">26 - 45</option>
+                <option value = "old">45+</option>
+         	</select><br><br><br>
+		    <label for="location"></label>Select Prefered Location<br><br>
+			<select class="dropdown" name = "dropdown" id="preferedage" required="select">
+			    <option value selected disabled> -- selected  Prefered Location -- </option>
+                <option value = "delhi">Delhi</option>
+                <option value = "">Mumbai</option>
+                <option value = "">Ghaziabad</option>
+                <option value = "">Nodia</option>
+                <option value = "">Pune</option>
+                <option value = "">Bangalor</option>
+                <option value = "">Gujurat</option>
+                <option value = "">Assam</option>
+                <option value = "">Tamil Nadu</option>
+                <option value = "">Kerela</option>
+         	</select><br><br><br>
+         	<label for="preferedgender" > Select Your Prefered Gender</label><br><br>
+			<select class="dropdown" name = "dropdown" id="preferedgender" required="select">
+			    <option value selected disabled> -- selected Your prefered Gender -- </option>
+                <option value = "male">Male</option>
+                <option value = "female">Female</option>
+                <option value = "other">Others</option>
+         	</select><br><br>
+
+			<br><br><br><br>
+			
+			<input type="submit" value="Save Profile">
+			<input type="reset" value="Reset Everything">
+			
+			</div>
+
+
+			</div>
+
+		  
+	</form>
+
+
+</body>
+</html>

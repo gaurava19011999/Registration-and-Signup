@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/signup_style.css" />
+  </head>
+  <body>
+    <div class="login-div">
+      <div class="logo"></div>
+      <div class="title"><strong>SOULMATE</strong></div>
+      <div class="sub-title">"Get the ideal partner"</div>
+      <form action='/signup' method='POST'>
+        <div class="fields">
+
+      	  <div class="name"><i class="fas fa-user-alt"></i><input type="fist name" class="user-input" id="fname" name="fname" placeholder="First Name" /></div>
+
+          <div class="name"><i class="fas fa-user-alt"></i><input type="last name" class="user-input" id="lname" name="lname" placeholder="Last name" /></div>
+
+          <div class="email"><i class="fas fa-envelope"></i><input type="email" class="user-input" id="email" name="email" placeholder="Email Address" /></div>
+
+          <div class="phone"><i class="fas fa-phone-alt"></i><input type="" required class="user-input" id="phone" name="phone" placeholder="Phone Number" /></div>
+
+          <div class="password"><i class="fas fa-user-lock"></i><input type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required class="pass-input" id="newpass" name="newpass" placeholder="New Password" id="myInput" />
+          <span class="eye" onclick="myFunction()">
+        	  <i class="fas fa-eye" id="hide1"></i>
+        	  <i class="fas fa-eye-slash" id="hide2"></i>
+          </span>
+    	  </div>
+
+          <div class="password"><i class="fas fa-user-lock"></i><input type="password" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"required class="pass-input" id="confirmpass" name="confirmpass" placeholder="Confirm Password"/></div>
+
+       {% csrf_token %} 
+      <button type="signup"class="signin-button">SIGN UP</button>
+      </form>
+      <div class="link"><a href="login"><strong>LOG IN</strong></a></div>
+      <div class="trouble"><a href="contact">Having Trouble? Contact Us </a></div>
+
+    </div>
+
+
+    <script>
+    	function myFunction() {
+    		var x = document.getElementById("myInput");
+    		var y = document.getElementById("hide1");
+    		var z = document.getElementById("hide2");
+
+    		if (x.type === 'password') {
+    			x.type = "text";
+    			y.style.display = "block";
+    			z.style.display = "none";
+    		}
+    		else {
+    			x.type = "password";
+    			y.style.display = "none";
+    			z.style.display = "block";
+    		}
+    	}
+    </script>
+  </body>
+</html>
